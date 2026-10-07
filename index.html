@@ -11,42 +11,148 @@
             --bg-light: #f6f8fa;
             --text-color: #24292e;
         }
-        body { 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
-            line-height: 1.7; 
-            color: var(--text-color); 
-            max-width: 850px; 
-            margin: 0 auto; 
-            padding: 30px 20px; 
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text-color);
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 30px 20px;
         }
-        h1 { border-bottom: 2px solid var(--primary-color); padding-bottom: 12px; color: #1b1f23; font-size: 2.2em; }
-        h2 { border-bottom: 1px solid var(--border-color); padding-bottom: 8px; color: var(--primary-color); margin-top: 35px; font-size: 1.4em; }
-        .contact-box { background: var(--bg-light); border: 1px solid var(--border-color); padding: 18px; border-radius: 8px; margin-bottom: 25px; }
-        .contact-box p { margin: 6px 0; }
-        .badge { background-color: #ddf4ff; color: #0969da; padding: 3px 8px; border-radius: 12px; font-size: 0.85em; font-weight: 600; }
-        .grade { font-weight: bold; color: #1a7f37; }
-        ul { padding-left: 22px; }
-        li { margin-bottom: 10px; }
-        .card { background: #ffffff; border: 1px solid var(--border-color); border-radius: 6px; padding: 16px; margin-top: 12px; }
-        .card h3 { margin-top: 0; color: #24292e; font-size: 1.1em; }
+
+        h1 {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 12px;
+            color: #1b1f23;
+            font-size: 2.2em;
+        }
+
+        h2 {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+            color: var(--primary-color);
+            margin-top: 35px;
+            font-size: 1.4em;
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 24px;
+            margin-bottom: 25px;
+        }
+
+        .profile-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .profile-info h1 {
+            margin-top: 0;
+        }
+
+        .contact-box {
+            background: var(--bg-light);
+            border: 1px solid var(--border-color);
+            padding: 18px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+
+        .profile-info .contact-box {
+            margin-bottom: 0;
+        }
+
+        .contact-box p {
+            margin: 6px 0;
+        }
+
+        .profile-photo {
+            width: 128px;
+            height: 170px;
+            object-fit: cover;
+            object-position: center;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            flex-shrink: 0;
+        }
+
+        .badge {
+            background-color: #ddf4ff;
+            color: #0969da;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+
+        .grade {
+            font-weight: bold;
+            color: #1a7f37;
+        }
+
+        ul {
+            padding-left: 22px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .card {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 16px;
+            margin-top: 12px;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #24292e;
+            font-size: 1.1em;
+        }
+
+        @media (max-width: 600px) {
+            .profile-header {
+                flex-direction: column-reverse;
+                gap: 14px;
+            }
+
+            .profile-photo {
+                width: 96px;
+                height: 128px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <h1>贺子涵 (Zihan He)</h1>
-    
-    <div class="contact-box">
-        <p><strong>学校与专业：</strong>理工学院（直博班） | 数学与应用数学专业 (2025级大二)</p>
-        <p><strong>学号：</strong>125090189</p>
-        <p><strong>邮箱：</strong><a href="mailto:125090189@link.cuhk.edu.cn">125090189@link.cuhk.edu.cn</a></p>
-        <p><strong>研究兴趣：</strong>人工智能 (AI)、应用数学 (Applied Mathematics)、计算机视觉、数据建模与算法设计</p>
-        <p><strong>GitHub 主页：</strong><a href="https://github.com/yeyu-wutong" target="_blank">https://github.com/yeyu-wutong</a></p>
+    <div class="profile-header">
+        <div class="profile-info">
+            <h1>贺子涵 (Zihan He)</h1>
+
+            <div class="contact-box">
+                <p><strong>学校与专业：</strong>理工学院（直博班） | 数学与应用数学专业 (2025级大二)</p>
+                <p><strong>学号：</strong>125090189</p>
+                <p><strong>邮箱：</strong><a href="mailto:125090189@link.cuhk.edu.cn">125090189@link.cuhk.edu.cn</a></p>
+                <p><strong>研究兴趣：</strong>人工智能 (AI)、应用数学 (Applied Mathematics)、计算机视觉、数据建模与算法设计</p>
+                <p><strong>GitHub 主页：</strong><a href="https://github.com/yeyu-wutong" target="_blank" rel="noopener noreferrer">https://github.com/yeyu-wutong</a></p>
+            </div>
+        </div>
+
+        <img class="profile-photo" src="zihan-he.jpg" alt="贺子涵个人照片">
     </div>
 
     <h2>个人简介</h2>
     <p>我是理工学院直博班数学与应用数学专业大二学生。我具备极其扎实的数理推导能力（高考数学 140 分、高考一模 148 分）与严谨的逻辑思维，熟练掌握 Python 编程与数据处理工具。我致力于将严谨的数学理论与人工智能算法深度结合，探索计算科学领域的实际建模与算法优化问题。</p>
 
-    <h2>荣誉与奖项 (Honors & Awards)</h2>
+    <h2>荣誉与奖项 (Honors &amp; Awards)</h2>
     <ul>
         <li><strong>北京市高中数学竞赛 二等奖 (省二)</strong> <span class="badge">全市前120名</span> — 2024 年</li>
         <li><strong>北京市高中数学竞赛 二等奖 (省二)</strong> <span class="badge">全市前150名</span> — 2023 年</li>
@@ -56,13 +162,15 @@
     <h2>教育背景与学术表现</h2>
     <ul>
         <li><strong>理工学院（直博班）</strong> - 数学与应用数学专业 (2025年至今)</li>
-        <li><strong>核心专业课程成绩：</strong>
+        <li>
+            <strong>核心专业课程成绩：</strong>
             <ul>
-                <li>荣誉微积分 I & II (Honors Calculus)：<span class="grade">Pure A</span></li>
+                <li>荣誉微积分 I &amp; II (Honors Calculus)：<span class="grade">Pure A</span></li>
                 <li>线性代数 (Linear Algebra)：<span class="grade">A-</span></li>
             </ul>
         </li>
-        <li><strong>自主学术探索 (Self-Directed Learning)：</strong>
+        <li>
+            <strong>自主学术探索 (Self-Directed Learning)：</strong>
             <ul>
                 <li><strong>MIT 线性代数公开课 (MIT 18.06)</strong>：系统学习矩阵分解、向量空间与线性映射等高阶代数理论。</li>
                 <li><strong>Neural Networks: Zero to Hero (Andrej Karpathy)</strong>：深入学习神经网络底层计算图原理、反向传播算法及大模型前沿架构。</li>
@@ -70,7 +178,7 @@
         </li>
     </ul>
 
-    <h2>社团与学术组织 (Societies & Activities)</h2>
+    <h2>社团与学术组织 (Societies &amp; Activities)</h2>
     <ul>
         <li><strong>数学派 (Math Society / Club)</strong>：积极参与学术讨论与数学问题研讨，与同伴交流数理推导与建模经验。</li>
         <li><strong>AI 协会 (AI Association)</strong>：计划加入，积极拓展人工智能前沿技术的实践与项目合作。</li>
@@ -79,7 +187,8 @@
     <h2>编程技能与项目实践</h2>
     <ul>
         <li><strong>编程语言与工具：</strong>Python (熟练应用)、Pytorch(入门)</li>
-        <li><strong>项目经历：</strong>
+        <li>
+            <strong>项目经历：</strong>
             <div class="card">
                 <h3>基于 Python 的游戏图像处理与识别程序 <span class="badge">图像算法</span></h3>
                 <p>独立开发基于 Python 的自动化图像识别程序，实现对游戏（如王者荣耀）头像及 UI 元素的数据裁剪、特征提取与精准匹配，具备基础的计算机视觉与数据预处理实践能力。</p>
@@ -91,7 +200,7 @@
         </li>
     </ul>
 
-    <h2>兴趣与特长 (Interests & Talents)</h2>
+    <h2>兴趣与特长 (Interests &amp; Talents)</h2>
     <ul>
         <li><strong>学术探究：</strong>数学探索、电子游戏与机制研究</li>
         <li><strong>体育运动：</strong>足球（国家二级运动员）、篮球</li>
